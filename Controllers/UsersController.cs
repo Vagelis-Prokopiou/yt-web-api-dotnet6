@@ -9,15 +9,14 @@ namespace dotnet.Controllers{
     [Route("/api/v1/[controller]")]
     public class UsersController : ControllerBase{
         public List<User> GetUsers() {
-            var list = new List<User>();
+            var list = new List<User>(1000);
             for (int i = 1; i < 1001; i++) {
-                var user = new User();
-                user.Id = i;
-                user.FirstName = "FirstName " + 1;
-                user.LastName = "LastName " + 1;
-                user.Framework = "dotnet 6";
-
-                list.Add(user);
+                list.Add(new User {
+                    Id = i,
+                    First_Name = "First_Name" + i,
+                    Last_Name = "Last_Name" + i,
+                    Framework = "dotnet6"
+                });
             }
 
             return list;
