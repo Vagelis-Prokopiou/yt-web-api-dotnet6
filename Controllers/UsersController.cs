@@ -11,10 +11,10 @@ namespace dotnet.Controllers{
             for (int index = 1; index < 1001; index++) {
                 list.Add(new User {
                     Id = index,
+                    Age = 25,
                     First_Name = "First_Name" + index,
                     Last_Name = "Last_Name" + index,
-                    Age = index,
-                    Framework = "dotnet6"
+                    Framework = "dotnet6 aaaaaaaa"
                 });
             }
 
