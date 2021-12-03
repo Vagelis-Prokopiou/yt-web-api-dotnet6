@@ -8,11 +8,12 @@ namespace dotnet.Controllers{
     public class UsersController : ControllerBase{
         public List<User> GetUsers() {
             var list = new List<User>(1000);
-            for (int i = 1; i < 1001; i++) {
+            for (int index = 1; index < 1001; index++) {
                 list.Add(new User {
-                    Id = i,
-                    First_Name = "First_Name" + i,
-                    Last_Name = "Last_Name" + i,
+                    Id = index,
+                    First_Name = "First_Name" + index,
+                    Last_Name = "Last_Name" + index,
+                    Age = index,
                     Framework = "dotnet6"
                 });
             }
